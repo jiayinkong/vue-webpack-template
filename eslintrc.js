@@ -1,0 +1,55 @@
+const { defineConfig } = require("eslint-define-config");
+
+module.exports = defineConfig({
+  root: true,
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+    es6: true,
+  },
+  plugins: ["vue"],
+  parser: "vue-eslint-parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+    allowImportExportEverywhere: true,
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  // extends: [
+  //   'eslint-config-airbnb-base',
+  //   'eslint:recommended',
+  //   'plugin:vue/vue3-essential',
+  //   'plugin:vue/vue3-recommended',
+  //   'plugin:prettier/recommended',
+  // ],
+  extends: [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:vue/vue3-essential",
+    "plugin:vue/vue3-recommended",
+    "plugin:prettier/recommended",
+  ],
+  rules: {
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "no-var": "error",
+    "no-shadow": 0,
+    "no-confusing-arrow": 0,
+    "no-param-reassign": 0,
+    "no-duplicate-imports": "error",
+    "no-useless-escape": 0,
+    indent: ["error", 2, { SwitchCase: 1 }],
+    camelcase: 0,
+    "new-cap": 0,
+    "max-len": 0,
+    "consistent-return": 0,
+    "default-case": 2,
+    "rest-spread-spacing": "error",
+    "prefer-const": "error",
+    "arrow-spacing": "error",
+    "prefer-destructuring": ["error", { object: true, array: false }],
+  },
+});

@@ -9,6 +9,14 @@
   </div>
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'App',
+})
+</script>
+
 <style lang="scss">
 .app-wrapper {
   color: red;
@@ -19,14 +27,5 @@
     height: 200px;
     background-size: cover;
   }
-
 }
 </style>
-
-<script lang="ts">
-  import { defineComponent } from 'vue';
-
-  export default defineComponent({
-    name: 'App'
-  })
-</script>

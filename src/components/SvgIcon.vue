@@ -5,20 +5,22 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, PropType } from 'vue';
+import { computed, PropType } from 'vue'
 
 const props = defineProps({
   iconClass: {
     type: String as PropType<string>,
-    require: true
+    require: true,
   },
   className: {
-    type: String as PropType<string>
-  }
-});
+    type: String as PropType<string>,
+  },
+})
 
-const iconName = computed(() => `#icon-${props.iconClass}`);
-const svgClass = computed(() => props.className ? `svg-icon ${props.className}` : 'svg-icon');
+const iconName = computed(() => `#icon-${props.iconClass}`)
+const svgClass = computed(() =>
+  props.className ? `svg-icon ${props.className}` : 'svg-icon'
+)
 </script>
 
 <style lang="scss" scoped>
