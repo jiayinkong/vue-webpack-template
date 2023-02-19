@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5", // 指定编译后的es版本
+    "module": "esnext", // 用来指定要使用的模块标准
+    "strict": true, // 启用所有严格类型检查
+    "jsx": "preserve", // 指定jsx代码用于的开发环境
+    "importHelpers": true, // 从 tslib 导入辅助工具函数，减少代码冗余
+    "moduleResolution": "node", // 用于选择模块解析策略
+    "experimentalDecorators": true, // 模块名到基于baseUrl的路径映射的列表
+    "skipLibCheck": true, // 忽略所有的声明文件的类型检查
+    "esModuleInterop": true, // 支持在commonjs模块下使用import d from 'cjs'
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出仅为了类型检查
+    "sourceMap": true, // 生成相应的.map文件
+    "baseUrl": ".", // 解析非相对模块名的基准目录，相对模块不会受baseUrl的影响
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
+    "types":["webpack-env"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.ts",
+    "types/**/*.d.ts",
+    "types/*.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}
