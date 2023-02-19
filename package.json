@@ -8,6 +8,12 @@
       "path": "node_modules/cz-customizable"
     }
   },
+  "lint-staged": {
+    "src/**/*.{js,vue,tsx,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "scripts": {
     "dev": "webpack serve --config build/webpack.dev.js",
     "build:dev": "webpack --env dev --config build/webpack.prod.js",
@@ -49,6 +55,7 @@
     "eslint-plugin-vue": "^9.9.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "7.0.1",
+    "lint-staged": "^13.1.2",
     "mini-css-extract-plugin": "^2.7.2",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.0.2",
